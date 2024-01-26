@@ -1,6 +1,6 @@
 package Coding;
 import java.util.Scanner;
-public class Main {
+public class SportsDayCelebration {
     public static void main(String args[]) {
         int noOfStudents = 0, noOfTeams = 0;
         Scanner in = new Scanner(System.in);
