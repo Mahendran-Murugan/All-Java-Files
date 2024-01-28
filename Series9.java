@@ -8,7 +8,10 @@ public class Series9 {
         Scanner in = new Scanner(System.in);
         n = in.nextInt();
         for (int i = 1; i <= n; i++) {
-            System.out.printf("%.0f ", Math.pow(i,i));
+            if(i % 2 != 0)
+                System.out.printf("%.0f ", Math.pow(i,3));
+            else
+                System.out.print((i*i)+" ");
         }
     }
 }
