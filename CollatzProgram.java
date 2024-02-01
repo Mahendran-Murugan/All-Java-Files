@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * CollatzProgram
- */
 public class CollatzProgram {
 
     public static void main(String[] args) {
