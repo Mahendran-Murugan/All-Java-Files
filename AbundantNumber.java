@@ -10,6 +10,5 @@ public class AbundantNumber {
         }
         if(res > n1) System.out.println("Abundant");
         else System.out.println("Not Abundant");
-
     }
 }
