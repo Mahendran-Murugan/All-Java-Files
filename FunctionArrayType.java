@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class FunctionArrayType {
     public static int arrayTypeFinder(int n, int[] arr){
         int arrType = 0, even = 0, odd = 0;
         for(int i = 0; i < n; i++){
