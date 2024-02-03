@@ -16,10 +16,11 @@ public class MaxElementInEachColumn {
             max = -1;
             for(int j = 0; j < m; j++){
                 max = Math.max(max, arr[j][i]);     
+                System.out.print(i+" "+j+" ");
             }
-            System.out.println(max+" ");
-            if(i < n-1)
-            System.out.print('\n');
+            // System.out.println(max+" ");
+            // if(i < n-1)
+            // System.out.print('\n');
         }
     }
 }
