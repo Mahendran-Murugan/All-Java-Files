@@ -10,8 +10,8 @@ public class QuickSort {
 
     public static int partition(int[] arr, int st, int end){
         int pivot = arr[end];
-        int pivotIndex = -1;
-        for(int i = 0; i < end; i++){
+        int pivotIndex = st-1;
+        for(int i = st; i <= end; i++){
             if(arr[i] < pivot){
                 ++pivotIndex;
                 swap(arr, i, pivotIndex);
@@ -31,9 +31,14 @@ public class QuickSort {
     }
 
     public static void main(String[] args){
-        int arr[] = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-        quickSort(arr, 0, arr.length-1);
-        for (int i : arr) {
+        Scanner in = new Scanner(System.in);
+        int n =  in.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = in.nextInt();
+        }
+        quickSort(arr, 0, n-1);
+        for(int i: arr){
             System.out.print(i + " ");
         }
     }
