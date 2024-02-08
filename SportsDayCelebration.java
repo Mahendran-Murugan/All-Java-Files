@@ -1,4 +1,4 @@
-package Coding;
+
 import java.util.Scanner;
 public class SportsDayCelebration {
     public static void main(String args[]) {

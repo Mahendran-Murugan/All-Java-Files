@@ -1,5 +1,3 @@
-package Coding;
-
 import java.util.Scanner;
 
 public class AutomorphicNumber {
