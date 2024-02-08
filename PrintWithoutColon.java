@@ -1,6 +1,4 @@
-package Coding;
 
-//
 class A11 {
     int i = m1();
     public  int m1() {

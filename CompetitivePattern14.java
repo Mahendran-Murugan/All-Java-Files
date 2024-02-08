@@ -1,4 +1,4 @@
-package Pattern;
+
 import java.util.Scanner;
 
 public class CompetitivePattern14 {
