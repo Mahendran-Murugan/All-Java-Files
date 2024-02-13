@@ -28,12 +28,12 @@ class Main {
     }
 
     public static void mergeSort(int[] arr, int start, int end) {
-        if (start >= end)
-            return;
-        int mid = start + (end - start) / 2;
-        mergeSort(arr, start, mid);
-        mergeSort(arr, mid + 1, end);
-        merger(arr, start, mid, end);
+        if (start < end){
+            int mid = start + (end - start) / 2;
+            mergeSort(arr, start, mid);
+            mergeSort(arr, mid + 1, end);
+            merger(arr, start, mid, end);
+        }
     }
 
     public static void main(String[] args) {
