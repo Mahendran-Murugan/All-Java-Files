@@ -1,5 +1,5 @@
 
-import java.util.*;
+import java.util.Scanner;
 
 class Circle{
   double rad;
@@ -13,7 +13,7 @@ class Circle{
   }
 }
 
-class CircleOops{
+public class CircleOops{
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();
