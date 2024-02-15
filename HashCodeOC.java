@@ -1,11 +1,11 @@
 
-class A{
+class B{
     int a, b;
 }
 
 public class HashCodeOC {
     public static void main(String[] args) {
-        A a1 = new A();
+        B a1 = new B();
         System.out.println(a1.hashCode());
     }
 }

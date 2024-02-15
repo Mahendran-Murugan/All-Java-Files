@@ -1,5 +1,5 @@
 
-class A{
+class C{
     int a, b;
     @Override
     public String toString(){
@@ -9,7 +9,7 @@ class A{
 
 public class ToStringOC {
     public static void main(String[] args) {
-        A a1 = new A();
+        C a1 = new C();
         System.out.println(a1);
     }
 }
