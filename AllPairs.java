@@ -19,7 +19,7 @@ public class AllPairs{
     for(int i = 0; i < n; i++){
       for(int j = 0; j < n; j++){
         if(p.arr[i]+p.arr[j] == x){
-          System.out.println(p.arr[i]+ " " + p.arr[j]+" ");
+          System.out.println(p.arr[i]+ " " + p.arr[j]);
         }
       }
     }
