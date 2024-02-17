@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Pairs{
+class Pairs{
   void read(int[] arr, int n){
     Scanner in = new Scanner(System.in);
     for(int i = 0; i < n; i++) arr[i] = in.nextInt();
@@ -18,7 +18,7 @@ public class Pairs{
   }
 }
 
-class Main{
+public class AllPairs{
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();
