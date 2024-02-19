@@ -49,4 +49,4 @@ class MarksOops{
     }
     System.out.printf("%d %d\n%d %d\n%d %d\n%d %d\n", bm1i, m1, bm2i, m2, bm3i, m3, bti, bt);
   }
-}
+} 
