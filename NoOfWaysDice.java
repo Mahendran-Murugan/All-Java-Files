@@ -1,5 +1,4 @@
-
-import java.util.*;
+import java.util.Scanner;
 
 class NoOfWaysDice{
   public static void combinations(int st, int end, String ans){

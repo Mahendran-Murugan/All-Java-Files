@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 class MaxElementIn2DArray{
   public static void main(String[] args){
