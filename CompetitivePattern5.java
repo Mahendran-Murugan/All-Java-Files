@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 class CompetitivePattern5{
   public static void main(String[] args){

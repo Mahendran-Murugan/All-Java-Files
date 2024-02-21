@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 
 class DistinctElemets{
   public static void main(String[] args){

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
   
   class BinarySearch{
     public static int binarySearch(int[] arr, int low, int high, int s){

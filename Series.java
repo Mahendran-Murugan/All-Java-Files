@@ -1,6 +1,6 @@
 
+import java.util.Scanner;
 
-import java.util.*;
 class Series{
     public static void main (String[] args){
         int n, count = 0;
