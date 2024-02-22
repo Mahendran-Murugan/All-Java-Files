@@ -30,7 +30,7 @@ class linkedList{
     }
 }
 
-public class LinkedListImplementation {
+public class LinkedListAddFirstImplementation {
     public static void main(String[] args) {
         linkedList ll = new linkedList();
         ll.addFirst(10);
