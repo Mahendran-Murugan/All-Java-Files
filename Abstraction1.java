@@ -3,22 +3,22 @@ import java.util.Scanner;
 
 abstract class Shape{
   int l, b, s, r;
-  abstract void rectangleArea(); 
-  abstract void squareArea(); 
-  abstract void circleArea(); 
+  abstract void rectangleArea(int l,int b);
+  abstract void squareArea;
+  abstract void circleArea(int r);
 }
 
 class Area extends Shape{
   @Override
-  void rectangleArea(){
+  void rectangleArea(int l,int b){
     System.out.println(l*b);
   }
   @Override
-  void squareArea(){
+  void squareArea(int l){
     System.out.println(s*s);
   }
   @Override
-  void circleArea(){
+  void circleArea(int r){
     System.out.printf("%.2f\n",(Math.PI*(double)r*(double)r));
   }
 }
@@ -31,8 +31,8 @@ public class Abstraction1{
     a.b = in.nextInt();
     a.s = in.nextInt();
     a.r = in.nextInt();
-    a.rectangleArea();
-    a.squareArea();
-    a.circleArea();
+    a.rectangleArea(a.l, a.b);
+    a.squareArea(a.s);
+    a.circleArea(a.r);
   }
 }
