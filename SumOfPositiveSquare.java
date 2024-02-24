@@ -5,7 +5,7 @@ public class SumOfPositiveSquare {
     public static int sumPositive(int n, int[] arr) {
         int sum = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = 1; j < arr[i] / 2; j++) {
+            for (int j = 1; j <= arr[i] / 2; j++) {
                 if (arr[i] == j * j) sum += arr[i];
             }
         }
