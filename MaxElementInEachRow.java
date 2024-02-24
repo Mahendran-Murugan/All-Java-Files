@@ -12,7 +12,7 @@ class MaxElementInEachRow{
         arr[i][j] = in.nextInt();
         max = Math.max(max, arr[i][j]);
       }
-      System.out.println(max);
+      System.out.println(max+"\n");
     }
   }
 }
