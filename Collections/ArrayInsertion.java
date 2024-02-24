@@ -1,3 +1,4 @@
+package Collections;
 import java.util.Scanner;
 
 public class ArrayInsertion {
