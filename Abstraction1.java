@@ -1,10 +1,9 @@
-
 import java.util.Scanner;
 
 abstract class Shape{
   int l, b, s, r;
   abstract void rectangleArea(int l,int b);
-  abstract void squareArea;
+  abstract void squareArea(int s);
   abstract void circleArea(int r);
 }
 
