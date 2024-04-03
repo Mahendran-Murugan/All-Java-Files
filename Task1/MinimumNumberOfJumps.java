@@ -1,3 +1,4 @@
+package Task1;
 public class MinimumNumberOfJumps {
 
     public static int minJumps(int[] arr) {

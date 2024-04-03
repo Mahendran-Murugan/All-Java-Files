@@ -1,3 +1,4 @@
+package Task1;
 public class CheckValidBST {
     public boolean isValidBST(TreeNode root) {
         return isValidBSTHelper(root, Long.MIN_VALUE, Long.MAX_VALUE);

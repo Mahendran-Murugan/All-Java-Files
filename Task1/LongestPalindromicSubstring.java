@@ -1,3 +1,4 @@
+package Task1;
 public class LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
