@@ -17,18 +17,28 @@ public class PalindromivArray {
                 if(arr[left] == arr[right]){
                     left++;
                     right--;
-                }
-                else if(arr[left] < arr[right]){
-                    left++;
-                    arr[left] = arr[left] + arr[left-1];
+                }else{
+                    if(arr[left] < arr[right]){
+                        left++;
+                        arr[left] = arr[left] + arr[left-1];
+                        arr[left-1] = Integer.MIN_VALUE;
+                        // lc++;
+                    }else{
+                        right--;
+                        arr[right] = arr[right] + arr[right+1];
+                        arr[right+1] = Integer.MIN_VALUE;
+                        // rc++;
+                    }
                     count++;
-                }else if(arr[left] > arr[right]){
-                    right--;
-                    arr[right] = arr[right] + arr[right+1];
-                    count++;
                 }
+                
             }
             System.out.println(count);
+            for(int i = 0; i < n; i++){
+                if(arr[i] != Integer.MIN_VALUE){
+                    System.out.print(arr[i]+ " ");
+                }
+            }
             t--;
         }
         in.close();
