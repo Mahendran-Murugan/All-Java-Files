@@ -15,11 +15,14 @@ public class StringPrimeSum {
         String s = in.next();
         int n = 0;
         int len = s.length();
-        int i = 0, sum = 0;
+        int sum = 0;
         boolean flag = true;
-        boolean isNeg = (s.charAt(0) == '-') ? true : false;
-        i = isNeg ? i + 1 : i;
-        while (i < len) {
+        boolean isNeg = false;
+        for (int i = 0; i < len; i++) {
+            if (s.charAt(i) == '-') {
+                isNeg = true;
+                continue;
+            }
             flag = true;
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
                 n = n * 10 + (s.charAt(i) - '0');
@@ -27,7 +30,6 @@ public class StringPrimeSum {
                 flag = false;
                 break;
             }
-            i++;
         }
         if (flag) {
             n = isNeg ? n * 11 : n;
