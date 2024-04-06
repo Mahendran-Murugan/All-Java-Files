@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class RobotMove {
 
-    public static int possibleWays(int arr[][], int n, int m) {
+    public static int possibleWays(int n, int m) {
         if (n == 0 && m == 0)
             return 1;
         if (n < 0 || m < 0)
@@ -14,8 +14,7 @@ public class RobotMove {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int m = in.nextInt();
-        int[][] arr = new int[n][m];
-        System.out.println(possibleWays(arr, n - 1, m - 1));
+        System.out.println(possibleWays(n - 1, m - 1));
         in.close();
     }
 }
