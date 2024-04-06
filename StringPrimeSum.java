@@ -38,10 +38,8 @@ public class StringPrimeSum {
                     sum += j;
                 }
             }
-            System.out.println(sum);
-        } else {
-            System.out.println(0);
         }
+        System.out.println(sum);
         in.close();
     }
 }
