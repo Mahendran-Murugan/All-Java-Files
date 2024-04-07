@@ -19,7 +19,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+public class BSTValidOrNot {
     TreeNode prev = null;
     boolean result = true;
 
