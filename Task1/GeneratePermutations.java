@@ -5,7 +5,7 @@ import java.util.List;
 public class GeneratePermutations {
     public List<String> generate(String input) {
         List<String> result = new ArrayList<>();
-        if (input.length() == 0) {
+        if (input.isEmpty()) {
             result.add("");
             return result;
         }
@@ -24,8 +24,8 @@ public class GeneratePermutations {
     }
 
     public static void main(String[] args) {
-        GeneratePermutations sol = new GeneratePermutations();
-        List<String> result = sol.generate("abc");
+        GeneratePermutations s = new GeneratePermutations();
+        List<String> result = s.generate("abc");
         for (String perm : result) {
             System.out.println(perm);
         }
