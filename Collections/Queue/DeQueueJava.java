@@ -9,18 +9,16 @@ public class DeQueueJava {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         for(int i = 0; i < n; i++){
-            if(i < n/2){
-                q.addFirst(in.nextInt());
-            }else{
-                q.addLast(in.nextInt());
-            }
+            q.addLast(in.nextInt());
         }
         for(int i = 0; i < n; i++){
-            if(i < n/2){
-                System.out.println(q.removeFirst());
-            }else{
-                System.out.println(q.removeLast());
-            }
+            System.out.println(q.removeFirst());
+        }
+        for(int i = 0; i < n; i++){
+            q.addFirst(in.nextInt());
+        }
+        for(int i = 0; i < n; i++){
+            System.out.println(q.removeLast());
         }
     }
 }
