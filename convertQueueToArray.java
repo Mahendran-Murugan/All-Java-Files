@@ -9,10 +9,7 @@ public class convertQueueToArray {
         for(int i = 0; i < n; i++){
             q.add(in.nextInt());
         }
-        int arr[] = new int[n];
-        for(int i = 0; i < n; i++){
-            arr[i] = q.poll();
-        }
+        Object arr[] = q.toArray();
         System.out.println(Arrays.toString(arr));
         in.close();
     }
