@@ -23,5 +23,17 @@ public class Testing {
         a.add(3);
         a.add(4);
         a.forEach(System.out::println);
+
+        StringBuilder s = new StringBuilder("Mahi");
+        System.out.println(s.substring(0, 3));
+        // StringBuffer s2 = new StringBuffer("Mahi");
+        // s2.setCharAt(0, 'A');
+        // System.out.println(s2);
+        // char c[] = "mahi".toCharArray();
+        // System.out.println(c);
+
+        System.out.println("Mahi".indexOf('M'));
+        System.out.println("MahiM".lastIndexOf('M'));
+        System.out.println("Mahi".equalsIgnoreCase("mahi"));
     }
 }
