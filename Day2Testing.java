@@ -1,6 +1,71 @@
 import java.io.*;
 
-public class Day2Testing {
+// Encapsulation, Inheritance, Polymorphism
+
+class Grandparent {
+    public void printCurrentClass() {
+        System.out.println("grand parent");
+    }
+}
+
+class Parent extends Grandparent {
+    @Override
+    public void printCurrentClass() {
+        System.out.println("parent");
+    }
+}
+
+class Student1 extends Parent {
+    private String name;
+    private int age;
+
+    Student1() {
+        name = "Mahi";
+        age = 20;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void shapeCalc(int a) {
+        System.out.println("Square");
+    }
+
+    public void shapeCalc(int a, int b) {
+        System.out.println("Rectangle");
+    }
+
+    @Override
+    public void printCurrentClass() {
+        super.printCurrentClass();
+    }
+}
+
+class Student2 extends Parent {
+    private String name;
+    private int age;
+
+    Student2() {
+        name = "Mahi";
+        age = 20;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}
+
+public class Day2Testing extends Student1 {
     public static void main(String[] args) throws IOException {
         // int x = 100;
         // System.out.printf("Printing simple" + " integer: x = %d\n", x);
@@ -49,5 +114,11 @@ public class Day2Testing {
         // writer.write(s);
         // writer.close();
 
+        Day2Testing day2 = new Day2Testing();
+        day2.setName("Mahendran");
+        System.out.println(day2.getName());
+        day2.shapeCalc(10);
+        day2.shapeCalc(10, 20);
+        day2.printCurrentClass();
     }
 }
