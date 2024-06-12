@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Vector;
 import java.util.Collections;
+import java.util.Stack;
 
 import Collections.Map.LinkedHashMapJava;
 import Collections.Queue.PriorityQueueJava;
@@ -186,5 +187,13 @@ public class Day3Testing {
         v.forEach(System.out::println);
         System.out.println(m.hashCode());
         System.out.println(m.size());
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        System.out.println(stack.peek());
+        System.out.println(stack);
     }
 }
