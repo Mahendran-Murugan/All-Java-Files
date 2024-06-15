@@ -6,6 +6,19 @@ public class Day6Testing {
         arr[j] = temp;
     }
 
+    public static void selectionSort(int[] arr) {
+        int minIndex = 0, len = arr.length;
+        for (int i = 0; i < len - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < len; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            swap(arr, minIndex, i);
+        }
+    }
+
     public static void bubbleSort(int[] arr) {
         int len = arr.length;
         for (int i = 0; i < len - 1; i++) {
@@ -19,7 +32,8 @@ public class Day6Testing {
 
     public static void main(String[] args) {
         int[] arr = new int[] { 1, 2, 3, 0, -1 };
-        bubbleSort(arr);
+        // bubbleSort(arr);
+        selectionSort(arr);
         for (int i : arr) {
             System.out.print(i + " ");
         }
