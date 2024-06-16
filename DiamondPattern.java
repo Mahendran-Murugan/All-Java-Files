@@ -13,7 +13,7 @@ public class DiamondPattern {
                     System.out.print("* ");
                 }
             } else {
-                for (int k = n / 2; k < i + 1; k++) {
+                for (int k = n / 2; k < i; k++) {
                     System.out.print(" ");
                 }
                 for (int j = n; j > i; j--) {
