@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Day9Testing {
     public static void alphabetPattern(int n) {
         int index, side_index;
@@ -17,7 +19,9 @@ public class Day9Testing {
     }
 
     public static void main(String[] args) {
-        alphabetPattern(5);
-        System.out.println();
+        // alphabetPattern(5);
+        // System.out.println();
+        int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        System.out.println(Arrays.stream(arr).sum());
     }
 }
