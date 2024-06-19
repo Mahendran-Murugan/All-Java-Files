@@ -4,28 +4,34 @@ import java.util.Scanner;
 
 public class Day10Testing {
 
-    public static void findPermutations(List<List<Integer>> ans, int[] nums, List<Integer> ds, boolean[] freq) {
-        if (ds.size() == nums.length) {
-            ans.add(new ArrayList<>(ds));
+    public static void findPermutations(List<String> ans, char[] arr, StringBuilder ds, boolean[] freq) {
+        if (ds.length() == arr.length) {
+            ans.add(ds.toString());
             return;
         }
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (!freq[i]) {
-                freq[i] = true;
-                ds.add(nums[i]);
-                findPermutations(ans, nums, ds, freq);
-                ds.remove(ds.size() - 1);
-                freq[i] = false;
+                freq[i] = true; // t f f
+                ds.append(arr[i]); // 10
+                findPermutations(ans, arr, ds, freq);
+                ds.deleteCharAt(ds.length() - 1);
+                freq[i] = false; // f f f
             }
         }
     }
 
-    public static List<List<Integer>> permutation(int[] arr) {
-        List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> ds = new ArrayList<>();
-        boolean[] freq = new boolean[arr.length];
+    public static List<String> permutation(char[] arr, String forbidden) {
+        List<String> ans = new ArrayList<>();
+        StringBuilder ds = new StringBuilder();
+        boolean[] freq = new boolean[arr.length]; // false false false
         findPermutations(ans, arr, ds, freq);
-        return ans;
+        List<String> finalAns = new ArrayList<>();
+        for (String i : ans) {
+            if (!i.contains(forbidden)) {
+                finalAns.add(i);
+            }
+        }
+        return finalAns;
     }
 
     public static void maxColFinder() {
@@ -102,10 +108,40 @@ public class Day10Testing {
         return res.toString();
     }
 
+    public static List<Integer> longestSubArray(int[] arr) {
+        List<Integer> res = new ArrayList<>();
+        int min = arr[0], minIndex = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                minIndex = i;
+            }
+        }
+        res.add(min);
+        for (int i = minIndex + 1; i < arr.length; i++) {
+            if (min < arr[i]) {
+                min = arr[i];
+                res.add(arr[i]);
+            }
+        }
+        return res;
+    }
+
+    public static void strPermutation(String s, String forbidden) {
+        System.out.println(s.contains(forbidden));
+    }
+
     public static void main(String[] args) {
         // maxColFinder();
         // System.out.println(removeRepeatedWords("Mahendran"));
-        System.out.println(mostRepeatedWords("mahendran is a programmer and mahendran is a hacker"));
+        // System.out.println(mostRepeatedWords("mahendran is a programmer and mahendran
+        // is a hacker"));
+        // int[] arr = new int[] { 3, 2, 5, 6, 4, 100 };
+        // System.out.println(longestSubArray(arr));
+        // permutation()
+        // strPermutation("Mahendra Singh Dhoni", "Dh");
+        // abc
+        System.out.println(permutation("abc".toCharArray(), "ab"));
     }
 }
 
@@ -125,7 +161,8 @@ public class Day10Testing {
 // mahendran is a programmer and mahendran is a hacker.
 
 // Question 4
-//
+// abc ab
+// abc cab
 
 // Question 5
-// [3, 4, 2, 5, 6, 0, 100]
+// [3, 2, 5, 6, 4, 100]
