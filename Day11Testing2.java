@@ -1,34 +1,30 @@
-package Tree;
-
-import java.util.Scanner;
-
-class Node {
+class BSTNode {
     int data;
-    Node left;
-    Node right;
+    BSTNode left;
+    BSTNode right;
 
-    Node(int data) {
+    BSTNode(int data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
 }
 
-class BST {
-    Node root;
+class BSTTree {
+    BSTNode root;
 
-    BST() {
+    BSTTree() {
         root = null;
     }
 
-    void insert(int data) {
-        Node newNode = new Node(data);
+    void inset(int data) {
+        BSTNode newNode = new BSTNode(data);
         if (root == null) {
             root = newNode;
         } else {
-            Node temp = root; //
+            BSTNode temp = root;
             while (true) {
-                if (newNode.data < temp.data) {
+                if (temp.data > newNode.data) {
                     if (temp.left == null) {
                         temp.left = newNode;
                         break;
@@ -48,28 +44,28 @@ class BST {
     }
 
     void display() {
-        displayRec(this.root);
+        BSTNode temp = root;
+        displayRecursion(temp);
     }
 
-    void displayRec(Node root) {
+    void displayRecursion(BSTNode root) {
         if (root == null)
             return;
-        // System.out.println(root.data); // preorder
-        displayRec(root.left);
-        System.out.println(root.data); // inorder
-        displayRec(root.right);
-        // System.out.println(root.data); // post order
+
+        // System.out.println(root.data);
+        displayRecursion(root.left);
+        // System.out.println(root.data);
+        displayRecursion(root.right);
+        System.out.println(root.data);
     }
 }
 
-public class BSTJava {
+public class Day11Testing2 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        BST b = new BST();
-        for (int i = 0; i < n; i++) {
-            b.insert(in.nextInt());
-        }
-        b.display();
+        BSTTree tree = new BSTTree();
+        tree.inset(10);
+        tree.inset(5);
+        tree.inset(15);
+        tree.display();
     }
 }
