@@ -26,7 +26,7 @@ class BST {
         if (root == null) {
             root = newNode;
         } else {
-            Node temp = root;
+            Node temp = root; //
             while (true) {
                 if (newNode.data < temp.data) {
                     if (temp.left == null) {
