@@ -141,7 +141,8 @@ public class Day10Testing {
         // permutation()
         // strPermutation("Mahendra Singh Dhoni", "Dh");
         // abc
-        System.out.println(permutation("abc".toCharArray(), "ab"));
+        // System.out.println(permutation("abc".toCharArray(), "ab"));
+        // System.out.println(removeRepeatedWords("swiss"));
     }
 }
 
