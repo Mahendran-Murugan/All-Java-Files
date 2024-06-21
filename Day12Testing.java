@@ -16,7 +16,7 @@ public class Day12Testing {
         }
         for (Map.Entry<Character, Integer> element : map.entrySet()) {
             if (element.getValue() == 1) {
-                res.append(String.valueOf(element.getKey()));
+                res.append(element.getKey());
             }
         }
         return res.toString();
