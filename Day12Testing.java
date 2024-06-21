@@ -6,7 +6,7 @@ public class Day12Testing {
         StringBuilder res = new StringBuilder();
         Map<Character, Integer> map = new LinkedHashMap<>();
         char c;
-        for (int i = 0; i < str.length(); i++) { // swiss {s:3,w:1,i:1}
+        for (int i = 0; i < str.length(); i++) {
             c = str.charAt(i);
             if (!map.containsKey(c)) {
                 map.put(c, 1);
@@ -22,8 +22,27 @@ public class Day12Testing {
         return res.toString();
     }
 
+    public static int maxSumCalc(int[] arr, int k) {
+        int sum = 0, maxSum = Integer.MIN_VALUE;
+        int l = 0, r = k - 1, n = arr.length - 1;
+        for (int i = l; i <= r; i++) { // 0, 1, 2
+            // System.out.println(i + ":" + arr[i]);
+            sum += arr[i];
+        }
+        maxSum = Math.max(maxSum, sum);
+        while (r < n) {
+            sum -= arr[l];
+            l++;
+            r++;
+            sum += arr[r];
+            maxSum = Math.max(maxSum, sum);
+        }
+        return sum;
+    }
+
     public static void main(String[] args) {
-        System.out.println(removeRepeatedWords("swiss"));
+        // System.out.println(removeRepeatedWords("swiss"));
+        System.out.println(maxSumCalc(new int[] { 0, 1, 2, 3, 4, -1, 9, 8 }, 4));
     }
 }
 
