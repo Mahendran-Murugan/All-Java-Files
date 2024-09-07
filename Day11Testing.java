@@ -2,7 +2,6 @@ import java.util.List;
 import java.util.*;
 
 public class Day11Testing {
-
     public static void findPermutations(char[] arr, List<String> ans, StringBuilder ds, boolean[] freq) {
         if (ds.length() == arr.length) {
             ans.add(ds.toString());

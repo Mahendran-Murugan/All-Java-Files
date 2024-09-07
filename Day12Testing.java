@@ -28,7 +28,7 @@ public class Day12Testing {
         for (int i = l; i <= r; i++) { // 0, 1, 2
             // System.out.println(i + ":" + arr[i]);
             sum += arr[i];
-        }
+        } // 0, 1, 2, 3, 4, 5 // 6
         maxSum = Math.max(maxSum, sum);
         while (r < n) {
             sum -= arr[l];

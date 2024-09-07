@@ -40,6 +40,11 @@ class Doggy implements Pet {
     public void sleep() {
         System.out.println("Dog sleep");
     }
+
+    @Override
+    public void creatureType() {
+        Pet.super.creatureType();
+    }
 }
 
 public class Day2Testing2 extends Doggy {

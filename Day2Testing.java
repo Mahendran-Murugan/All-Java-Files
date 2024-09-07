@@ -70,10 +70,10 @@ public class Day2Testing extends Student1 {
         // int x = 100;
         // System.out.printf("Printing simple" + " integer: x = %d\n", x);
         // System.out.printf("Formatted with" + " precision: PI = %.3f\n", Math.PI);
-        // float n = 5.2f;
+        float n = 5.2f;
         // System.out.printf("Formatted to " + "specific width: n = %.4f\n", n);
-        // n = 2324435.3f;
-        // System.err.printf("Formatted to " + "right margin: n = %13.4f\n", n);
+        n = 2324435.3f;
+        System.err.printf("Formatted to " + "right margin: n = %13.4f\n", n);
 
         // InputStreamReader in = new InputStreamReader(System.in);
         // int ch;
@@ -92,6 +92,34 @@ public class Day2Testing extends Student1 {
         // fout.write(b);
         // System.out.println("Writing Successfull");
         // fout.close();
+
+        // String name = "Mahendran";
+        // byte[] b = name.getBytes();
+        // FileOutputStream fout = new FileOutputStream(new File("Text.txt"));
+        // fout.write(b);
+        // fout.close();
+
+        // FileInputStream fin = new FileInputStream(new File("Text.txt"));
+        // int c;
+        // while ((c = fin.read()) != -1) {
+        // System.out.print((char) c);
+        // }
+        // fin.close();
+
+        // BufferedReader reader = new BufferedReader(new FileReader(new
+        // File("Text.txt")));
+        // int i = 0;
+        // while ((i = reader.read()) != -1) {
+        // System.out.print((char) i);
+        // }
+        // System.out.println(reader.readLine());
+        // reader.close();
+
+        // Writer writer = new BufferedWriter(new FileWriter(new File("Text.txt"),
+        // true));
+        // String s = "\nMahendran M";
+        // writer.write(s);
+        // writer.close();
 
         // FileInputStream fin = new FileInputStream(new File("Tester.txt"));
         // int b;
@@ -114,11 +142,11 @@ public class Day2Testing extends Student1 {
         // writer.write(s);
         // writer.close();
 
-        Day2Testing day2 = new Day2Testing();
-        day2.setName("Mahendran");
-        System.out.println(day2.getName());
-        day2.shapeCalc(10);
-        day2.shapeCalc(10, 20);
-        day2.printCurrentClass();
+        // Day2Testing day2 = new Day2Testing();
+        // day2.setName("Mahendran");
+        // System.out.println(day2.getName());
+        // day2.shapeCalc(10);
+        // day2.shapeCalc(10, 20);
+        // day2.printCurrentClass();
     }
 }
