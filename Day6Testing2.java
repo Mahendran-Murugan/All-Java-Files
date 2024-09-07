@@ -33,7 +33,6 @@ public class Day6Testing2 {
                 return binarySearch(arr, mid + 1, high, target);
             else
                 return binarySearch(arr, low, mid - 1, target);
-
         }
         return -1;
     }

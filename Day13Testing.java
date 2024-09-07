@@ -1,5 +1,9 @@
 import java.util.*;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Day13Testing {
     public static void main(String[] args) {
@@ -21,11 +25,16 @@ public class Day13Testing {
         // }
         // }
 
-        l.forEach((i) -> {
-            if (i == 2)
-                l.remove(i);
-        });
+        // l.forEach((i) -> {
+        // if (i == 2)
+        // l.remove(i);
+        // });
 
-        System.out.println(l);
+        // System.out.println(l);
+
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 2, 3, 3, 4, 4));
+        Predicate<Integer> aboveThree = (i) -> i > 3;
+        List<Integer> filterdList = list.stream().map((i) -> i * 2).collect(Collectors.toList());
+        System.out.println(filterdList);
     }
 }

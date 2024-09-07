@@ -157,6 +157,8 @@ public class Day10Testing {
 // Question 2
 // Mahendran
 // Mhedr
+// swiss
+// wi
 
 // Question 3
 // mahendran is a programmer and mahendran is a hacker.

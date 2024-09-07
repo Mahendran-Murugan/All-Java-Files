@@ -106,7 +106,8 @@ public class Day2Testing extends Student1 {
         // }
         // fin.close();
 
-        BufferedReader reader = new BufferedReader(new FileReader(new File("Text.txt")));
+        // BufferedReader reader = new BufferedReader(new FileReader(new
+        // File("Text.txt")));
         // int i = 0;
         // while ((i = reader.read()) != -1) {
         // System.out.print((char) i);
@@ -114,9 +115,9 @@ public class Day2Testing extends Student1 {
         // System.out.println(reader.readLine());
         // reader.close();
 
-        // BufferedWriter writer = new BufferedWriter(new FileWriter(new
-        // File("Text.txt")));
-        // String s = "Mahendran M";
+        // Writer writer = new BufferedWriter(new FileWriter(new File("Text.txt"),
+        // true));
+        // String s = "\nMahendran M";
         // writer.write(s);
         // writer.close();
 
